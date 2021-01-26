@@ -12,4 +12,17 @@ export class EventsListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  event1 = {
+    id: 1,
+    name: 'Angular Connect',
+    date: '10/12/22',
+    time: '10:00',
+    price: 599.99,
+    location: {
+      address: 'STM Canary',
+      city: 'CDMX',
+      country: 'Mexico'
+    }
+  }
+
 }

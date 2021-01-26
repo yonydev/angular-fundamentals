@@ -1,0 +1,13 @@
+<div>
+  <div class="well hoverwell thumbnail">
+    <h2>Event</h2>
+    <p>{{ event.name }}</p>
+    <p>Time: {{ event.time}}</p>
+    <p>Price: {{ event.price | currency:'USD' }}</p>
+    <div>
+      <span>Location: {{ event.location.address }}</span>
+      <span>&nbsp;</span>
+      <span>{{ event.location.city }}, {{ event.location.country }}</span>
+    </div>
+  </div>
+</div>
