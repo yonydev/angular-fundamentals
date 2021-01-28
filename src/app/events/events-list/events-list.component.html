@@ -1,5 +1,7 @@
 <div>
   <h1>Upcoming Events</h1>
   <hr>
-  <app-event-thumbnail [event]="event1" (clickEvent)="handleEventClicked()"></app-event-thumbnail>
+  <app-event-thumbnail #thumbnail [event]="event1"></app-event-thumbnail>
+  <h3>{{ thumbnail.someProperty }}</h3>
+  <button (click)="thumbnail.logFoo()">Log Foo</button>
 </div>

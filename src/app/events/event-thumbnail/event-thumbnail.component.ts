@@ -10,13 +10,15 @@ export class EventThumbnailComponent implements OnInit {
   @Input() event: any
   @Output() clickEvent = new EventEmitter
 
+  someProperty = 'Algo COOLS'
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  handleClickMe() {
-    this.clickEvent.emit()
+  logFoo() {
+    console.log('FOO');
   }
 
 }
