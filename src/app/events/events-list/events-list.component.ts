@@ -25,4 +25,8 @@ export class EventsListComponent implements OnInit {
     }
   }
 
+  handleEventClicked() {
+    console.log('recived: ', this.event1.name);
+  }
+
 }
