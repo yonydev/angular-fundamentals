@@ -1,12 +1,15 @@
 <div>
   <div class="well hoverwell thumbnail">
-    <h2>{{ event.name }}</h2>
-    <p>Time: {{ event.time}}</p>
-    <p>Price: {{ event.price | currency:'USD' }}</p>
-    <div>
-      <span>Location: {{ event.location.address }}</span>
+    <h2>{{ event?.name }}</h2>
+    <p>Time: {{ event?.time}}</p>
+    <p>Price: {{ event?.price | currency:'USD' }}</p>
+    <div *ngIf="event?.location">
+      <span>Location: {{ event?.location?.address }}</span>
       <span>&nbsp;</span>
-      <span>{{ event.location.city }}, {{ event.location.country }}</span>
+      <span>{{ event?.location?.city }}, {{ event?.location?.country }}</span>
+    </div>
+    <div *ngIf="event?.onlineUrl">
+      <span>{{ event?.onlineUrl }}</span>
     </div>
   </div>
 </div>
